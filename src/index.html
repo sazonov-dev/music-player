@@ -7,7 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-
+<body class="body">
+    <div class="container">
+        <div class="audio">
+            <h2>Выберите музыку</h2>
+            <div class="audio-content">
+                <button class="music-choose" data-id="5Sta Family - Искры.mp3">5Sta Family - Искры</button>
+                <button class="music-choose" data-id="Dabro - На часах ноль-ноль.mp3">Dabro - На часах ноль-ноль</button>
+                <button class="music-choose" data-id="NLO - Танцы.mp3">NLO - Танцы</button>
+                <button class="music-choose" data-id="ПАПА ДЖАН - ДИКИЙ (КАВКАЗСКАЯ МУЗЫКА).mp3">ПАПА ДЖАН - ДИКИЙ (КАВКАЗСКАЯ МУЗЫКА)</button>
+                <button class="music-choose" data-id="Фристайл - Чёрные глаза.mp3">Фристайл - Чёрные глаза</button>
+                <button class="music-choose" data-id="sample-12s.wav">sample-12s</button>
+            </div>
+        </div>
+        <div class="wave-content">
+            <div class="wave-content-container">
+                <label for="volume">
+                    Громкость
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                </label>
+                <span id="timeNow">0:00</span>
+                <span id="timeFull">0:00</span>
+                <button id="playButton">Play/Pause</button>
+            </div>
+            <div id="wave"></div>
+        </div>
+    </div>
+    <template id="audio-track">
+        <div class="audio-track"></div>
+    </template>
 </body>
 </html>

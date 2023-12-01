@@ -26,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-                type: 'asset/resource'
+                type: 'assets/resource'
             },
             {
                 test: /\.css$/,
@@ -36,6 +36,20 @@ module.exports = {
                 },
                     'postcss-loader'
                 ]
+            },
+            {
+                test: /\.(mp3)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/audio/[name][ext]',
+                },
+            },
+            {
+                test: /\.(wav)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/audio/[name][ext]',
+                },
             },
         ]
     },
